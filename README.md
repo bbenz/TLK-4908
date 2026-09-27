@@ -48,3 +48,19 @@ scripts/smoke-test.sh
 ```
 
 The container smoke test needs Docker. The container image scan in `scripts/scan.sh` also needs Docker. If Docker is not running, the script skips that image scan and says so.
+
+
+## Planted problems in `demo/agent-pr`
+
+- The book data includes an invented book. `./mvnw -B verify` finds the bad ISBN check digit.
+- The API returns `author` as one string instead of `authors` as an array. `scripts/api-diff.sh` finds it.
+- The app adds `org.apache.commons:commons-text:1.9`. `scripts/scan.sh` finds CVE-2022-42889 through OSV.
+- The Dockerfile builds with Java 25 and runs with Java 21. `scripts/smoke-test.sh` shows the container problem. Running the jar on JDK 21 also fails with `UnsupportedClassVersionError`.
+
+## Book data
+
+The book data was compiled and checked on 2026-09-26 against publisher and bookseller pages.
+
+Titles, authors, and ISBNs can change. Check the publisher page before you use the data.
+
+`scripts/lookup-isbns.sh` reads ISBNs from `books.json` and checks Open Library. It needs `jq`. It only warns, because Open Library does not list every recent book. On 2026-09-26, Open Library had no record for 5 of the 10 books.
