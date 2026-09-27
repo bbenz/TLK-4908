@@ -1,0 +1,7 @@
+target/
+build/
+.tools/
+.idea/
+.vscode/
+*.log
+jdk-*/

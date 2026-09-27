@@ -1,0 +1,78 @@
+openapi: 3.0.3
+info:
+  title: Books API
+  version: 1.0.0
+paths:
+  /api/books:
+    get:
+      summary: List books
+      parameters:
+        - name: topic
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: q
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: A list of books
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Book'
+  /api/books/{isbn}:
+    get:
+      summary: Get a book by ISBN
+      parameters:
+        - name: isbn
+          in: path
+          required: true
+          schema:
+            type: string
+            pattern: '^\d{13}$'
+      responses:
+        '200':
+          description: A book
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Book'
+        '404':
+          description: Book not found
+components:
+  schemas:
+    Book:
+      type: object
+      required: [isbn, title, authors, publisher, year, url, topics]
+      properties:
+        isbn:
+          type: string
+          pattern: '^\d{13}$'
+        title:
+          type: string
+        subtitle:
+          type: string
+        authors:
+          type: array
+          minItems: 1
+          items:
+            type: string
+        publisher:
+          type: string
+        year:
+          type: integer
+        url:
+          type: string
+          format: uri
+        topics:
+          type: array
+          items:
+            type: string
+        description:
+          type: string

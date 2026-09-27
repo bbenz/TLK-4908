@@ -1,0 +1,7 @@
+target
+build
+.tools
+.git
+.github
+*.log
+jdk-*
