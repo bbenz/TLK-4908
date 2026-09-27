@@ -1,6 +1,5 @@
 package com.example.books;
 
-import org.apache.commons.text.WordUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -28,6 +27,13 @@ class HomeController {
     }
 
     public static String shortDescription(String description) {
-        return WordUtils.abbreviate(description, 120, 140, "...");
+        if (description == null || description.length() <= 140) {
+            return description;
+        }
+        int cut = description.lastIndexOf(' ', 137);
+        if (cut < 80) {
+            cut = 137;
+        }
+        return description.substring(0, cut) + "...";
     }
 }

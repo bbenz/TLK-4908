@@ -1,9 +1,10 @@
-FROM eclipse-temurin:25-jdk AS build
+ARG JAVA_VERSION=25
+FROM eclipse-temurin:${JAVA_VERSION}-jdk AS build
 WORKDIR /workspace
 COPY . .
 RUN ./mvnw -B -q -DskipTests package
 
-FROM eclipse-temurin:21-jre
+FROM eclipse-temurin:${JAVA_VERSION}-jre
 WORKDIR /app
 COPY --from=build /workspace/target/books.jar /app/books.jar
 EXPOSE 8080

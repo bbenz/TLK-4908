@@ -21,9 +21,9 @@ class BookApiControllerTest {
     void listsBooksWithContractShape() throws Exception {
         mvc.perform(get("/api/books"))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$", hasSize(11)))
+                .andExpect(jsonPath("$", hasSize(10)))
                 .andExpect(jsonPath("$[0].isbn").value("9781836204619"))
-                .andExpect(jsonPath("$[0].author").value("John Blum"));
+                .andExpect(jsonPath("$[0].authors[0]").value("John Blum"));
     }
 
     @Test

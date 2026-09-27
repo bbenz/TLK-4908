@@ -35,21 +35,6 @@
     "description": "A project-based book that goes from a first LLM call to RAG, agents, and AI microservices on the JVM with Spring Boot or Quarkus."
   },
   {
-    "isbn": "9781738520463",
-    "title": "Agentic Java in Practice",
-    "authors": [
-      "Casey Brandt"
-    ],
-    "publisher": "Contoso Press",
-    "year": 2025,
-    "url": "https://www.contoso-press.example/books/agentic-java-in-practice",
-    "topics": [
-      "agents",
-      "ai-assisted-coding"
-    ],
-    "description": "A practical guide to building AI agents in Java with Spring AI and LangChain4j."
-  },
-  {
     "isbn": "9781098174507",
     "title": "Applied AI for Enterprise Java Development",
     "subtitle": "Leveraging Generative AI, LLMs, and Machine Learning in the Java Enterprise",

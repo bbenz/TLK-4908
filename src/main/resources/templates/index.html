@@ -29,7 +29,7 @@
     <article th:each="book : ${books}" class="book">
       <h2><a th:href="${book.url}" th:text="${book.title}">Book title</a></h2>
       <p class="meta"><span th:text="${book.publisher}">Publisher</span>, <span th:text="${book.year}">2026</span></p>
-      <p th:text="${book.author}">Authors</p>
+      <p th:text="${#strings.listJoin(book.authors, ', ')}">Authors</p>
       <p th:if="${book.description}" th:text="${T(com.example.books.HomeController).shortDescription(book.description)}">Description</p>
       <p class="topics"><span th:each="topic : ${book.topics}" th:text="${topic}">topic</span></p>
     </article>

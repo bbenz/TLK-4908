@@ -14,7 +14,7 @@ public record Book(
         @Pattern(regexp = "^\\d{13}$") String isbn,
         @Schema(requiredMode = Schema.RequiredMode.REQUIRED) @NotBlank String title,
         String subtitle,
-        @Schema(requiredMode = Schema.RequiredMode.REQUIRED) @NotBlank String author,
+        @Schema(requiredMode = Schema.RequiredMode.REQUIRED, minLength = 1) @NotEmpty List<@NotBlank String> authors,
         @Schema(requiredMode = Schema.RequiredMode.REQUIRED) @NotBlank String publisher,
         @Schema(requiredMode = Schema.RequiredMode.REQUIRED) @Positive int year,
         @Schema(requiredMode = Schema.RequiredMode.REQUIRED, format = "uri") @NotBlank String url,
