@@ -1,9 +1,9 @@
 <#
 .SYNOPSIS
-Builds the image in the registry, then deploys k8s/books.yaml to AKS.
+Builds the image with Docker, pushes it to the registry, then deploys k8s/books.yaml to AKS.
 
 .DESCRIPTION
-Run ./deploy/aks/infra.ps1 first. The image tag is the current commit.
+Run ./deploy/aks/infra.ps1 first, and start Docker. The image tag is the current commit.
 The Service gets a public address. By default, its Azure DNS name is the registry name.
 Use -DnsLabel "" for no DNS name.
 
@@ -41,8 +41,12 @@ if (git -C $root status --porcelain) {
 }
 
 Write-Host "Building $image"
-az acr build --registry $registry --image "books:$Tag" $root
-if ($LASTEXITCODE -ne 0) { throw "The image build failed." }
+docker build --platform linux/amd64 --tag $image $root
+if ($LASTEXITCODE -ne 0) { throw "The image build failed. Is Docker running?" }
+az acr login --name $registry --output none
+if ($LASTEXITCODE -ne 0) { throw "Could not sign in to the registry." }
+docker push $image
+if ($LASTEXITCODE -ne 0) { throw "Could not push the image." }
 az aks get-credentials --resource-group $ResourceGroup --name $cluster --overwrite-existing --output none
 if ($LASTEXITCODE -ne 0) { throw "Could not get the cluster credentials." }
 

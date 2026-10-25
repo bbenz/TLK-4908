@@ -74,13 +74,13 @@ Copilot code review reads `REVIEW.md` and `AGENTS.md` from the pull request's br
 
 ## Deploy to AKS
 
-You need the Azure CLI, kubectl, and an Azure subscription. The scripts create Azure resources that cost money while they run. Delete them when you are done.
+You need Docker, the Azure CLI, kubectl, and an Azure subscription. The scripts create Azure resources that cost money while they run. Delete them when you are done.
 
 PowerShell:
 
 ```powershell
 ./deploy/aks/infra.ps1     # a resource group, a container registry, and an AKS cluster
-./deploy/aks/deploy.ps1    # build the image in the registry, then deploy k8s/books.yaml
+./deploy/aks/deploy.ps1    # build and push the image, then deploy k8s/books.yaml
 ./deploy/aks/down.ps1      # delete everything
 ```
 

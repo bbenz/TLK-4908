@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# Build the image in the registry, then deploy k8s/books.yaml to AKS. Run deploy/aks/infra.sh first.
+# Build the image with Docker, push it to the registry, then deploy k8s/books.yaml to AKS.
+# Run deploy/aks/infra.sh first, and start Docker.
 #   NAMESPACE  Kubernetes namespace (default: books)
 #   DNS_LABEL  Azure DNS name for the public address (default: the registry name). Set it empty for none.
 #   TAG        Image tag (default: the current commit)
@@ -25,7 +26,9 @@ if [ -n "$(git status --porcelain)" ]; then
 fi
 
 echo "Building $IMAGE"
-az acr build --registry "$REGISTRY" --image "books:$TAG" .
+docker build --platform linux/amd64 --tag "$IMAGE" .
+az acr login --name "$REGISTRY"
+docker push "$IMAGE"
 az aks get-credentials --resource-group "$RESOURCE_GROUP" --name "$CLUSTER" --overwrite-existing --output none
 
 kubectl create namespace "$NAMESPACE" --dry-run=client --output yaml | kubectl apply --filename -
