@@ -5,3 +5,9 @@ build
 .github
 *.log
 jdk-*
+infra
+deploy
+k8s
+demo
+rulesets
+compose.yaml
