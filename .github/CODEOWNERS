@@ -1,0 +1,11 @@
+# A code owner must approve changes to the files that judge the code.
+# To reuse this file, change @bbenz to your own account or team.
+/api/openapi.yaml                                        @bbenz
+/src/test/java/com/example/books/BookDataRulesTest.java  @bbenz
+/scripts/                                                @bbenz
+/.github/                                                @bbenz
+/AGENTS.md                                               @bbenz
+/REVIEW.md                                               @bbenz
+/infra/                                                  @bbenz
+/deploy/                                                 @bbenz
+/rulesets/                                               @bbenz
