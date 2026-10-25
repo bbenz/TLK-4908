@@ -1,0 +1,10 @@
+body { font-family: Arial, sans-serif; margin: 0; color: #1f2937; background: #f8fafc; }
+main { max-width: 960px; margin: 0 auto; padding: 2rem; }
+header, form, .book { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 1rem; margin-bottom: 1rem; }
+form { display: flex; gap: 1rem; align-items: end; flex-wrap: wrap; }
+label { display: grid; gap: .25rem; font-weight: 600; }
+input, select, button { padding: .5rem; font: inherit; }
+button { background: #2563eb; color: white; border: 0; border-radius: 6px; }
+a { color: #1d4ed8; }
+.meta { color: #475569; }
+.topics span { display: inline-block; margin: .2rem .4rem .2rem 0; padding: .2rem .45rem; background: #e0f2fe; border-radius: 999px; font-size: .85rem; }
