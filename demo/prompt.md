@@ -6,6 +6,7 @@ about Java and AI that are on sale today.
   `src/main/resources/books.json`.
 - Add a home page with a topic filter and a
   text search.
-- Add a Dockerfile that builds and runs the
-  site on Java 25.
+- Add a Dockerfile and `compose.yaml` that
+  build and run the site on Java 25.
+- Add Kubernetes manifests in `k8s/` for AKS.
 - Follow `AGENTS.md`.
