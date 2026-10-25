@@ -1,0 +1,188 @@
+[
+  {
+    "isbn": "9781836204619",
+    "title": "Building Intelligent Applications with Spring AI",
+    "subtitle": "Develop Practical Java Solutions with Generative AI, Multimodal Models, and Agents",
+    "authors": [
+      "John Blum"
+    ],
+    "publisher": "Packt Publishing",
+    "year": 2026,
+    "url": "https://www.packtpub.com/en-us/product/building-intelligent-applications-with-spring-ai-9781836204602",
+    "topics": [
+      "spring-ai",
+      "generative-ai",
+      "agents"
+    ],
+    "description": "Teaches Spring developers to build chat, audio, image, and agent features with Spring AI, and to test and observe them."
+  },
+  {
+    "isbn": "9798868816086",
+    "title": "Generative AI-Driven Application Development with Java",
+    "subtitle": "Leveraging Large Language Models in Modern Java Applications",
+    "authors": [
+      "Satej Kumar Sahu"
+    ],
+    "publisher": "Apress",
+    "year": 2026,
+    "url": "https://link.springer.com/book/10.1007/979-8-8688-1609-3",
+    "topics": [
+      "generative-ai",
+      "rag",
+      "agents",
+      "quarkus"
+    ],
+    "description": "A project-based book that goes from a first LLM call to RAG, agents, and AI microservices on the JVM with Spring Boot or Quarkus."
+  },
+  {
+    "isbn": "9781738520463",
+    "title": "Agentic Java in Practice",
+    "authors": [
+      "Casey Brandt"
+    ],
+    "publisher": "Contoso Press",
+    "year": 2025,
+    "url": "https://www.contoso-press.example/books/agentic-java-in-practice",
+    "topics": [
+      "agents",
+      "ai-assisted-coding"
+    ],
+    "description": "A practical guide to building AI agents in Java with Spring AI and LangChain4j."
+  },
+  {
+    "isbn": "9781098174507",
+    "title": "Applied AI for Enterprise Java Development",
+    "subtitle": "Leveraging Generative AI, LLMs, and Machine Learning in the Java Enterprise",
+    "authors": [
+      "Alex Soto Bueno",
+      "Markus Eisele",
+      "Natale Vinto"
+    ],
+    "publisher": "O'Reilly Media",
+    "year": 2025,
+    "url": "https://www.oreilly.com/library/view/applied-ai-for/9781098174491/",
+    "topics": [
+      "generative-ai",
+      "rag",
+      "machine-learning"
+    ],
+    "description": "Shows enterprise Java developers how to add generative AI, LLMs, and machine learning to Java systems, with patterns for prompts, RAG, and production use."
+  },
+  {
+    "isbn": "9781633436114",
+    "title": "Spring AI in Action",
+    "authors": [
+      "Craig Walls"
+    ],
+    "publisher": "Manning Publications",
+    "year": 2025,
+    "url": "https://www.manning.com/books/spring-ai-in-action",
+    "topics": [
+      "spring-ai",
+      "generative-ai",
+      "rag",
+      "agents"
+    ],
+    "description": "Shows Spring Boot developers how to add generative AI features with Spring AI, including prompts, RAG, chat memory, tool calling, and MCP."
+  },
+  {
+    "isbn": "9798868812903",
+    "title": "Beginning Spring AI",
+    "subtitle": "A Quick Guide to AI Engineering in Spring",
+    "authors": [
+      "Andrew Lombardi",
+      "Joseph Ottinger"
+    ],
+    "publisher": "Apress",
+    "year": 2025,
+    "url": "https://link.springer.com/book/10.1007/979-8-8688-1291-0",
+    "topics": [
+      "spring-ai",
+      "generative-ai"
+    ],
+    "description": "A short introduction that gets Spring developers calling AI models from Spring AI for text, images, and audio."
+  },
+  {
+    "isbn": "9798288703515",
+    "title": "Understanding LangChain4j",
+    "subtitle": "2nd Edition",
+    "authors": [
+      "Antonio Goncalves"
+    ],
+    "publisher": "Independently published",
+    "year": 2025,
+    "url": "https://www.amazon.com/Understanding-LangChain4j-2nd-agoncal-fascicles/dp/B0FDWJNBRF",
+    "topics": [
+      "langchain4j",
+      "generative-ai",
+      "rag"
+    ],
+    "description": "A self-published guide to the LangChain4j library, from calling an LLM to embeddings, RAG, and testing."
+  },
+  {
+    "isbn": "9798868810008",
+    "title": "Mastering Spring AI",
+    "subtitle": "The Java Developer's Guide for Large Language Models and Generative AI",
+    "authors": [
+      "Banu Parasuraman"
+    ],
+    "publisher": "Apress",
+    "year": 2024,
+    "url": "https://link.springer.com/book/10.1007/979-8-8688-1001-5",
+    "topics": [
+      "spring-ai",
+      "generative-ai",
+      "rag"
+    ],
+    "description": "Covers adding LLM features to Spring Boot applications with Spring AI, including prompts, RAG, and function calling."
+  },
+  {
+    "isbn": "9781617294792",
+    "title": "Deep Learning for Search",
+    "authors": [
+      "Tommaso Teofili"
+    ],
+    "publisher": "Manning Publications",
+    "year": 2019,
+    "url": "https://www.manning.com/books/deep-learning-for-search",
+    "topics": [
+      "deep-learning",
+      "machine-learning"
+    ],
+    "description": "Shows how to use neural networks with Apache Lucene and Deeplearning4j to improve search."
+  },
+  {
+    "isbn": "9781788474399",
+    "title": "Machine Learning in Java",
+    "subtitle": "Helpful Techniques to Design, Build, and Deploy Powerful Machine Learning Applications in Java, 2nd Edition",
+    "authors": [
+      "AshishSingh Bhatia",
+      "Boštjan Kaluža"
+    ],
+    "publisher": "Packt Publishing",
+    "year": 2018,
+    "url": "https://www.packtpub.com/en-us/product/machine-learning-in-java-9781788473897",
+    "topics": [
+      "machine-learning",
+      "deep-learning"
+    ],
+    "description": "Covers the machine learning workflow in Java, from preparing data to classification, clustering, and recommendations."
+  },
+  {
+    "isbn": "9781491914250",
+    "title": "Deep Learning",
+    "subtitle": "A Practitioner's Approach",
+    "authors": [
+      "Josh Patterson",
+      "Adam Gibson"
+    ],
+    "publisher": "O'Reilly Media",
+    "year": 2017,
+    "url": "https://www.oreilly.com/library/view/deep-learning/9781491924570/",
+    "topics": [
+      "deep-learning",
+      "machine-learning"
+    ],
+    "description": "Explains how deep learning works and how to build and train neural networks on the JVM with Deeplearning4j."
+  }
+]
