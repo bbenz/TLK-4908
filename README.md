@@ -1,6 +1,6 @@
-# TLK-4908 books demo
+# Books demo: Software Factories for the Agent Era
 
-This repo supports the talk "Reviewing AI-Written Java: Coding Assistants and a CI Gate" at JCON at IBM TechXchange 2026.
+This repo supports the talk "Software Factories for the Agent Era"
 
 A coding agent builds a small Java web site that lists books about Java and AI. Its pull request goes to two reviewers:
 
