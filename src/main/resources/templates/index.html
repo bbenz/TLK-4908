@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Java and AI books</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<main>
+  <header>
+    <h1>Java and AI books</h1>
+    <p>Data compiled for this demo. Check the publisher page before you use it.</p>
+    <p th:text="'Last checked: ' + ${lastChecked}">Last checked: 2026-09-26</p>
+  </header>
+  <form method="get">
+    <label>Topic
+      <select name="topic">
+        <option value="">All topics</option>
+        <option th:each="topic : ${topics}" th:value="${topic}" th:text="${topic}" th:selected="${topic == selectedTopic}"></option>
+      </select>
+    </label>
+    <label>Search
+      <input name="q" th:value="${q}" placeholder="Title, author, publisher">
+    </label>
+    <button type="submit">Apply</button>
+  </form>
+  <section class="books">
+    <article th:each="book : ${books}" class="book">
+      <h2><a th:href="${book.url}" th:text="${book.title}">Book title</a></h2>
+      <p class="meta"><span th:text="${book.publisher}">Publisher</span>, <span th:text="${book.year}">2026</span></p>
+      <p th:text="${book.author}">Authors</p>
+      <p th:if="${book.description}" th:text="${T(com.example.books.HomeController).shortDescription(book.description)}">Description</p>
+      <p class="topics"><span th:each="topic : ${book.topics}" th:text="${topic}">topic</span></p>
+    </article>
+  </section>
+</main>
+</body>
+</html>
